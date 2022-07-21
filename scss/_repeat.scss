@@ -1,0 +1,32 @@
+.btn-green {
+	display: inline-block;
+	background: linear-gradient(90deg, #00c97b 0%, #00d981 96.96%);
+	box-shadow: 0px 4px 4px rgba(1, 203, 124, 0.2);
+	@include adaptiv-value("width", 240, 150, 4);
+	@include adaptiv-value("height", 66, 45, 4);
+	@include adaptiv-value("line-height", 66, 45, 4);
+	@include adaptiv-value("border-radius", 36, 20, 4);
+	text-align: center;
+	font-weight: 700;
+	font-size: 13px;
+	color: #ffffff;
+	cursor: pointer;
+	transition: opacity 0.4s ease;
+
+	@media (min-width: 991.98px) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+.title {
+	font-weight: 800;
+	line-height: 113%;
+	@include adaptiv-value("font-size", 44, 20, 4);
+	@include adaptiv-value("margin-bottom", 40, 20, 4);
+}
+
+.blog-bg {
+	background: linear-gradient(79.63deg, #5B52A3 1.08%, #40B8EA 100%);
+}
