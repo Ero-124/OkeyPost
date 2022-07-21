@@ -1,0 +1,40 @@
+/* Connecting files SCSS */
+@import "_nullstyle";
+@import "_repeat";
+@import "_header";
+@import "_main";
+@import "_buy";
+@import "_footer";
+
+
+
+body {
+	font-family: "Gilroy", sans-serif;
+	font-weight: 700;
+	color: $color1;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	max-width: 1800px;
+	margin: 0 auto;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	// We press footer
+	>main {
+		flex: 1 1 auto;
+		@include adaptiv-value("padding-bottom", 80, 50, 5);
+	}
+}
+
+.container {
+	max-width: 1370px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
