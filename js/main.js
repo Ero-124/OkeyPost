@@ -55,3 +55,15 @@ const profitable__swiper = new Swiper('.profitable__swiper', {
   });
 
 
+
+
+
+const item = document.getElementsByClassName("help-question__item");
+
+for(let i = 0; i < item.length; i++) {
+	item[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+	})
+}
+
+
