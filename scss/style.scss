@@ -4,6 +4,11 @@
 @import "_header";
 @import "_main";
 @import "_buy";
+@import "_sales";
+@import "_pricing";
+@import "_help";
+@import "_bonuses";
+@import "_blog";
 @import "_footer";
 
 
@@ -34,7 +39,7 @@ body {
 }
 
 .container {
-	max-width: 1370px;
+	max-width: 1430px;
 	margin: 0 auto;
 	padding: 0 15px;
 }

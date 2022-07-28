@@ -1,0 +1,183 @@
+.black-friday {
+
+   // .black-friday__title
+
+   &__title {
+      max-width: 830px;
+   }
+
+   // .black-friday__inner
+
+   &__inner {}
+
+   // .black-friday__items
+
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   // .black-friday__item
+
+   &__item {
+      display: flex;
+      flex: 0 0 50%;
+      margin: 0px 0px 30px 0px;
+   }
+
+   // .black-friday__pages
+
+   &__pages {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      color: #C0C9D7;
+
+      span {
+         width: 15px;
+      }
+
+      a {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 42px;
+         height: 42px;
+         line-height: 42px;
+         border-radius: 50%;
+         margin: 0 3px 10px;
+         ;
+         border: 1px solid #C0C9D7;
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 88%;
+         color: #C0C9D7;
+         transition: all 0.3s ease 0s;
+
+         &::before {
+            font-size: 10px;
+         }
+
+         &.active {
+            border: 1px solid #01CD7D;
+            color: #01CD7D;
+         }
+      }
+   }
+
+   .item-friday {
+
+      // .item-friday__image
+
+      &__image {
+         flex: 0 0 49%;
+         position: relative;
+      }
+
+      // .item-friday__img
+      &__img {
+         img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover
+         }
+      }
+
+
+
+      // .item-friday__info
+
+      &__info {
+         @include adaptiv-value("padding-left", 40, 10, 5);
+         padding-top: 10px;
+         padding-bottom: 10px;
+         padding-right: 5px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         max-width: 318px;
+      }
+
+      // .item-friday__top
+
+      &__top {}
+
+      // .item-friday__title
+
+      &__title {
+         display: inline-block;
+         font-weight: 700;
+         @include adaptiv-value("font-size", 24, 14, 5);
+         line-height: 150%;
+         margin: 0px 0px 9px 0px;
+         transition: color 0.3s ease 0s;
+      }
+
+      // .item-friday__price
+
+      &__price,
+      &__txt,
+      &__link {
+         font-weight: 300;
+         @include adaptiv-value("font-size", 18, 11, 5);
+         @include adaptiv-value("margin-bottom", 18, 0, 5);
+         line-height: 200%;
+      }
+
+      // .item-friday__txt
+
+      &__txt {
+         @include adaptiv-value("margin-bottom", 18, 7, 5);
+      }
+
+      // .item-friday__link
+
+      &__link {
+         color: #01CD7D;
+         font-weight: 700;
+         margin: 0px 0px 0px 0px;
+         transition: color 0.3s ease 0s;
+      }
+   }
+
+   @media (max-width: 991.98px) {
+      .black-friday__item {
+         flex: 0 0 100%;
+      }
+
+      .item-friday__image {
+         flex: 0 0 32%;
+      }
+
+      .item-friday__info {
+         padding-top: 0;
+         padding-bottom: 0;
+      }
+   }
+
+   @media (max-width: 479.98px) {
+      .item-friday__image {
+         flex: 0 0 40%;
+      }
+   }
+
+   @media (min-width: 991.98px) {
+      .item-friday__link:hover {
+         color: #61dbaaa4;
+      }
+
+      .item-friday__title:hover {
+         color: rgba(44, 37, 37, 0.838);
+      }
+
+      .black-friday__pages a:hover {
+         border: 1px solid #01CD7D;
+         color: #01CD7D;
+      }
+   }
+}
