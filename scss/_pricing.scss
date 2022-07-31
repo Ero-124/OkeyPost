@@ -88,6 +88,11 @@
 
 .services-blog {
    @include adaptiv-value("padding-bottom", 160, 50, 5);
+
+   &.pb {
+      padding: 0px 0px 0px 0px;
+   }
+
    // .services-blog__title
 
    &__title {}
@@ -231,7 +236,7 @@
       .services-blog__cnt {
          flex: 0 0 70%;
       }
-     
+
    }
 }
 

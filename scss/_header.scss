@@ -1,6 +1,7 @@
 .header {
 	// .header__inner
-
+	position: relative;
+	z-index: 1000;
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -16,6 +17,7 @@
 		align-items: center;
 		position: relative;
 		flex: 0 0 47px;
+
 		img {
 			max-width: 100%;
 		}
@@ -32,6 +34,7 @@
 			height: 46px;
 			max-width: 100%;
 		}
+
 		span {
 			font-weight: 800;
 			@include adaptiv-value("font-size", 30, 23, 1);
@@ -68,6 +71,7 @@
 			line-height: 187%;
 			color: $color1;
 			transition: opacity 0.4s ease;
+
 			@media (min-width: 991.98px) {
 				&:hover {
 					opacity: 0.7;
@@ -75,6 +79,7 @@
 			}
 		}
 	}
+
 	.right-menu {
 		display: flex;
 		align-items: center;
@@ -83,6 +88,7 @@
 		&__login {
 			font-size: 15px;
 			@include adaptiv-value("margin-right", 42, 20, 1);
+			cursor: pointer;
 
 			a {
 				color: $color1;
@@ -90,6 +96,7 @@
 				font-size: 15px;
 				line-height: 107%;
 				transition: opacity 0.4s ease;
+
 				@media (min-width: 991.98px) {
 					&:hover {
 						opacity: 0.7;
@@ -111,6 +118,7 @@
 				display: inline-block;
 				@include adaptiv-value("width", 170, 140, 1);
 				color: #ffffff;
+
 				@media (min-width: 991.98px) {
 					&:hover {
 						opacity: 0.7;
@@ -119,6 +127,7 @@
 			}
 		}
 	}
+
 	@media (max-width: 991.98px) {
 		&__burger {
 			display: inline-block;
@@ -127,6 +136,7 @@
 			position: relative;
 			z-index: 2;
 			cursor: pointer;
+
 			&::before,
 			&::after {
 				content: "";
@@ -136,12 +146,15 @@
 				background-color: #000;
 				transition: all 0.3s ease 0s;
 			}
+
 			&::before {
 				top: 0;
 			}
+
 			&::after {
 				bottom: 0;
 			}
+
 			span {
 				position: absolute;
 				top: 8px;
@@ -150,20 +163,24 @@
 				background-color: #000;
 				transition: all 0.3s ease 0s;
 			}
+
 			&.active {
 				&::before {
 					top: 8px;
 					transform: rotate(45deg);
 				}
+
 				&::after {
 					bottom: 8px;
 					transform: rotate(-45deg);
 				}
+
 				span {
 					transform: scale(0);
 				}
 			}
 		}
+
 		.menu {
 			position: fixed;
 			top: 0;
@@ -177,6 +194,7 @@
 			padding: 100px 0px 0px 0px;
 			transition: all 0.3s ease 0s;
 			background-color: #484343;
+
 			&.active {
 				right: 0;
 			}
@@ -184,15 +202,18 @@
 			&__list {
 				display: block;
 			}
+
 			&__item {
 				margin: 0px 0px 20px 0px;
 			}
+
 			&__link {
 				color: #ffffff;
 				font-size: 20px;
 			}
 		}
 	}
+
 	@media (max-width: 479.98px) {
 		&__logo {
 			span {
@@ -201,3 +222,230 @@
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+/* 
+.log {
+
+	// .log__container
+
+	&__container {
+		display: none;
+		opacity: 0;
+		position: relative;
+		max-width: 480px;
+		width: 100%;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 70px rgba(138, 138, 138, 0.1);
+		border-radius: 16px;
+		overflow: hidden;
+		transition: opacity 0.3s ease 0s;
+
+		.recovery {
+			opacity: 0;
+			transition: opacity 0.9s ease;
+		}
+
+		&.active {
+			opacity: 1;
+			display: block;
+			.log__forms {
+				height: 440px;
+			}
+			.login {
+				margin-left: -50%;
+				opacity: 0;
+				transition: margin-left 0.18s ease, opacity 0.15s ease;
+			}	
+			.recovery {
+				opacity: 1;
+				transition: opacity 0.2s ease; 
+			}
+		}
+	}
+
+	// .log__forms
+
+	&__forms {
+		display: flex;
+		align-items: center;
+		height: 640px;
+		width: 200%;
+		transition: height 0.3s ease 0s;
+	}
+
+	// .log__form
+
+	&__form {
+		width: 50%;
+		padding: 42px 38px 51px 42px;
+		background-color: #ffffff;
+		transition: margin-left 0.18s ease;
+	}
+
+	// .log__title
+
+	&__title {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 133%;
+	}
+
+	// .log__sub
+
+	&__sub {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 162%;
+		margin: 9px 0px 0px 0px;
+	}
+}
+
+.login {
+
+	// .login__items
+
+	&__items {
+		margin: 21px 0px 24px 0px;
+	}
+
+	// .login__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		margin: 0px 0px 15px 0px;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+
+		label {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 225%;
+			margin: 0px 0px 4px 0px;
+		}
+
+		input {
+			background: #FCFDFF;
+			border: 1px solid #C0C9D7;
+			border-radius: 6px;
+			height: 60px;
+			width: 100%;
+			padding: 10px;
+			padding-right: 40px;
+			font-size: 17px;
+
+			&:is(:focus, :valid)~i {
+				color: #4267B2;
+				transition: all 0.3s ease 0s;
+
+			}
+		}
+
+		.inp-pass {
+			position: relative;
+			width: 100%;
+
+			i {
+				position: absolute;
+				top: 22px;
+				transition: all 0.3s ease 0s;
+			}
+
+			.show-hide-pw {
+				right: 15px;
+				cursor: pointer;
+			}
+
+		}
+	}
+
+	// .login__recovery
+
+	&__recovery {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 114%;
+		margin: 0px 0px 30px 0px;
+
+		&.mb {
+			margin: 0px 0px 0px 0px;
+			flex: 0 0 45%;
+		}
+
+		a {
+			font-weight: 400;
+			color: #01CD7D;
+			text-decoration: none;
+			transition: all 0.3s ease 0s;
+
+			@media (min-width: 991.98px) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	// .login__it
+
+	&__it {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// .login__btn
+
+	&__btn {
+		flex: 0 0 50%;
+		height: 60px;
+		line-height: 60px;
+	}
+
+	// .login__social
+
+	&__social {
+		display: flex;
+
+		a {
+			width: 48px;
+			height: 48px;
+			line-height: 48px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			color: #ffffff;
+			font-size: 24px;
+			margin: 0px 7px 0px 0px;
+
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+
+			&:nth-child(1) {
+				background-color: #EA4335;
+			}
+
+			&:nth-child(2) {
+				background-color: #4267B2;
+			}
+
+			&:nth-child(3) {
+				background-color: #5181B8;
+
+			}
+		}
+	}
+} */
