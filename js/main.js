@@ -69,60 +69,9 @@ for (let i = 0; i < item.length; i++) {
 
 
 
-/* 	
-const comeIn = document.querySelector(".right-menu__login");
-const close = document.querySelector(".popup-account__close");
-const container = document.querySelector(".popup-account__container");
-const popupBody = document.querySelector(".popup-account__body");
-const pwShowHide = document.querySelectorAll(".show-hide-pw");
-const pwFields = document.querySelectorAll(".password");
-const recovery = document.querySelector(".popup-account__recovery-link");
-const login = document.querySelector(".popup-account__login");
-
-
-comeIn.addEventListener("click", function () {
-	container.classList.add("show");
-	document.body.style.overflow = "hidden";
-});
-
-
-document.addEventListener("click", (e) => {
-	if (e.target === container || e.target === close) {
-		container.classList.remove("show");
-		document.body.style.overflow = "auto";
-	}
-})
 
 
 
-
-pwShowHide.forEach(eyeIcon => {
-	eyeIcon.addEventListener("click", () => {
-		pwFields.forEach(pwField => {
-			if (pwField.type === "password") {
-				pwField.type = "text";
-
-				pwShowHide.forEach(icon => {
-					icon.classList.replace("fa-eye-slash", "fa-eye")
-				})
-			} else {
-				pwField.type = "password"
-
-				pwShowHide.forEach(icon => {
-					icon.classList.replace("fa-eye", "fa-eye-slash")
-				})
-			}
-		})
-	})
-});
-
-recovery.addEventListener("click", () => {
-	container.classList.add("active");
-})
-
-login.addEventListener("click", () => {
-	container.classList.remove("active");
-}) */
 
 const openPopup = document.querySelector(".right-menu__login");
 const popup = document.querySelector(".popup-account__container");
@@ -131,6 +80,7 @@ const pwShowHide = document.querySelectorAll(".show-hide-pw");
 const pwFields = document.querySelectorAll(".password");
 const recovery = document.querySelector(".popup-account__recovery-link");
 const login = document.querySelector(".popup-account__login");
+const popupBg = document.querySelector(".popup-account__bg");
 
 pwShowHide.forEach(eyeIcon => {
 	eyeIcon.addEventListener("click", () => {
@@ -152,27 +102,28 @@ pwShowHide.forEach(eyeIcon => {
 	})
 });
 
-openPopup.addEventListener("click", function() {
+openPopup.addEventListener("click", function () {
 	popup.classList.add("show");
-	document.body.style.overflow = "hidden"
+	document.body.classList.add("active");
+	popupBg.classList.add("active");
 })
 
 
-closeBtn.addEventListener("click", function() {
+
+closeBtn.addEventListener("click", function () {
 	popup.classList.remove("show");
-	document.body.style.overflow = ""
+	document.body.classList.remove("active");
+	popupBg.classList.remove("active");
 })
 
 
-recovery.addEventListener("click", function() {
+recovery.addEventListener("click", function () {
 	popup.classList.add("active");
+	document.querySelector(".popup-account__body").style.display = "block"
 })
 
 
-login.addEventListener("click", function() {
+login.addEventListener("click", function () {
 	popup.classList.remove("active");
+	document.querySelector(".popup-account__body").style.display = "none"
 })
-
-
-
-
