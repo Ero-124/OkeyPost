@@ -1,0 +1,110 @@
+.other {
+
+   // .other__inner
+
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      @include adaptiv-value("margin-left", -30, -15, 2);
+      @include adaptiv-value("margin-right", -30, -15, 2);
+   }
+
+   // .other__items
+
+   &__items {
+      flex: 0 0 32.3333%;
+      @include adaptiv-value("padding-left", 15, 5, 5);
+      @include adaptiv-value("padding-right", 15, 5, 5);
+      @include adaptiv-value("margin-bottom", 50, 25, 5);
+      overflow: hidden;
+   }
+
+   // .other__item
+
+   &__item {
+      background: #FFFFFF;
+      box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.05);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: all 0.7s ease 0s;
+
+      @media (min-width: 991.98px) {
+         &:hover {
+            opacity: 0.5;
+            transform: scale(1.1);
+         }
+      }
+   }
+
+   // .other__image
+
+   &__image {
+      margin: 0px 0px 15px 0px;
+      img {
+         max-width: 100%;
+      }
+   }
+
+   // .other__title
+
+   &__title {
+      font-weight: 700;
+      line-height: 145%;
+      @include adaptiv-value("font-size", 22, 12, 5);
+      @include adaptiv-value("margin-bottom", 22, 10, 5);
+      @include adaptiv-value("padding-left", 29, 5, 5);
+      @include adaptiv-value("padding-right", 35, 10, 5);
+      flex: 1 1 auto;
+   }
+
+   // .other__info
+
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 400;
+      @include adaptiv-value("font-size", 13, 9, 5);
+      line-height: 108%;
+      color: #222222;
+      opacity: 0.5;
+      @include adaptiv-value("padding-left", 29, 5, 5);
+      @include adaptiv-value("padding-right", 35, 10, 5);
+      @include adaptiv-value("padding-bottom", 41, 14, 5);
+   }
+
+   // .other__date
+
+   &__date {}
+
+   // .other__minute
+
+   &__minute {
+      span {
+         @include adaptiv-value("margin-left", 10, 4, 5);
+      }
+   }
+
+   // .other__pages
+
+   &__pages {
+      a.active {
+         border: 1px solid #FF5290;
+         color: #FF5290;
+      }
+
+      @media (min-width: 991.98px) {
+         a:hover {
+            border: 1px solid #FF5290;
+            ;
+            color: #FF5290;
+         }
+      }
+   }
+   @media (max-width: 767.98px) {
+      .other__items {
+         flex: 0 0 50%;
+      }
+   }
+}

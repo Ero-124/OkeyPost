@@ -67,3 +67,80 @@ for(let i = 0; i < item.length; i++) {
 }
 
 
+
+
+
+const comeIn = document.querySelector(".right-menu__login");
+const container = document.querySelector(".popup-account__container");
+const popupBody = document.querySelector(".popup-account__body");
+const pwShowHide = document.querySelectorAll(".show-hide-pw");
+const pwFields = document.querySelectorAll(".password");
+const recovery = document.querySelector(".popup-account__recovery-link");
+const login = document.querySelector(".popup-account__login");
+
+
+comeIn.addEventListener("click", function() {
+	container.style.display = 'flex';
+	document.body.style.overflow = "hidden";
+});
+
+document.addEventListener("click", (e) => {
+	if(e.target === container) {
+	document.body.style.overflow = "auto";
+	container.style.display = "none"
+	}
+})
+
+
+
+pwShowHide.forEach(eyeIcon => {
+	eyeIcon.addEventListener("click", () => {
+		pwFields.forEach(pwField => {
+			if(pwField.type === "password") {
+				pwField.type = "text";
+
+				pwShowHide.forEach(icon => {
+					icon.classList.replace("fa-eye-slash", "fa-eye")
+				})
+			} else {
+				pwField.type = "password"
+
+				pwShowHide.forEach(icon => {
+					icon.classList.replace("fa-eye", "fa-eye-slash")
+				})
+			}
+		})
+	})
+});
+
+recovery.addEventListener("click", () => {
+	container.classList.add("active");
+})
+
+login.addEventListener("click", () => {
+	container.classList.remove("active");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

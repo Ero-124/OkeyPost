@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Title document -->
 	<title>OkeyPost</title>
@@ -52,8 +54,9 @@
 					</nav>
 					<div class="header__right-menu right-menu">
 						<div class="right-menu__login">
-							<a href="" class="icon-user">Вход</a>
+							<span class="icon-user">Вход</span>
 						</div>
+
 						<div class="right-menu__connect">
 							<a href="" class="btn-green">Связаться с нами</a>
 						</div>
@@ -64,6 +67,68 @@
 				</div>
 			</div>
 		</header>
+
+
+		<div class="popup-account__container">
+			<div class="popup-account__body login">
+				<h2 class="popup-account__title">Выполните вход в ваш личный кабинетод</h2>
+				<form action="#" class="popup-account__forms">
+					<div class="popup-account__items">
+						<div class="popup-account__item">
+							<label for="login-phone">Номер телефона:</label>
+							<input type="text" id="login-phone" required>
+						</div>
+						<div class="popup-account__item">
+							<label for="login-email">Ваш email:</label>
+							<input type="text" id="login-email" required>
+						</div>
+						<div class="popup-account__item">
+							<label for="pass">Ваш пароль:</label>
+							<div class="popup-account__pass">
+								<input type="password" class="password" id="pass" required>
+								<i class="fa-solid fa-eye-slash show-hide-pw"></i>
+							</div>
+						</div>
+					</div>
+					<div class="popup-account__recovery">
+						<div><a href="#" class="popup-account__link popup-account__recovery-link">Восстановление пароля</a>
+							или <a href="" class="popup-account__link popup-account__signup-link">быстрая регистрация</a>
+						</div>
+					</div>
+					<div class="popup-account__item-soc">
+						<div class="popup-account__btn">
+							<a href="" class="popup-account__button btn-green">Войти</a>
+						</div>
+						<div class="popup-account__social">
+							<a href="" class="icon-google"></a>
+							<a href="" class="icon-facebook"></a>
+							<a href="" class="icon-vk"></a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- Восстоновление пароля -->
+			<div class="popup-account__body recovery">
+				<h2 class="popup-account__title">Восстановление пароля</h2>
+				<h3 class="popup-account__sub">Введите Email, с которым вы зарегистрированы на сайте, и нажмите
+					<b>«Восстановить»</b></h3>
+				<form action="#" class="popup-account__forms">
+					<div class="popup-account__items">
+						<div class="popup-account__item">
+							<label for="recovery-email">Ваш email:</label>
+							<input type="text" id="recovery-email" required>
+						</div>
+					</div>
+					<div class="popup-account__recovery">
+						<div>Вспомнили пароль? <a href="#" class="popup-account__link popup-account__login">Выполните вход</a>
+						</div>
+					</div>
+					<div class="popup-account__btn">
+						<a href="" class="popup-account__button btn-green">Восстановить</a>
+					</div>
+				</form>
+			</div>
+		</div>
 
 		<main>
 			<section class="blog-section">
@@ -1261,8 +1326,15 @@
 				</div>
 			</div>
 		</footer>
+
+
 	</div>
 
+
+
+
+
+	<script src="https://kit.fontawesome.com/364482cb4d.js" type="text/javascript"></script>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

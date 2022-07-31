@@ -60,7 +60,6 @@
 // ==================================================================================================
 
 .help-question {
-   @include adaptiv-value("padding-bottom", 160, 40, 5);
    // .help-question__title
 
    &__title {}
