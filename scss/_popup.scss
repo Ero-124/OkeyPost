@@ -1,7 +1,19 @@
 .popup-account {
 
-   // .popup-account__container
+   // .popup-account__bg
+   &__bg {
+      &.active {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.5);
+         z-index: 1001;
+      }
+   }
 
+   // .popup-account__container
    &__container {
       position: absolute;
       top: -150%;
@@ -31,6 +43,8 @@
             transform 200ms ease-in-out 0s;
       }
 
+      
+
       .popup-account__close {
          position: absolute;
          top: 10px;
@@ -54,22 +68,24 @@
 
       &.active {
          display: flex;
-         opacity: 1;
-
 
          .login {
             display: none;
-            margin-left: -50%;
             opacity: 0;
             transition: margin-left 0s ease, opacity 0s ease;
          }
 
          .recovery {
-            display: block;
+            display: none;
             opacity: 1;
             transition: opacity 0s ease;
          }
       }
+   }
+
+   // .popup-account__body
+   &__body {
+      display: none;
    }
 
 
@@ -225,4 +241,8 @@
       @include adaptiv-value("height", 60, 40, 5);
       @include adaptiv-value("line-height", 60, 40, 5);
    }
+}
+
+body.active {
+   overflow: hidden;
 }

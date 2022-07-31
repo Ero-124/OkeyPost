@@ -379,6 +379,15 @@ a.green {
     margin: 0px 0px 20px 0px;
   }
 }
+.popup-account__bg.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
 .popup-account__container {
   position: absolute;
   top: -150%;
@@ -423,18 +432,19 @@ a.green {
 }
 .popup-account__container.active {
   display: flex;
-  opacity: 1;
 }
 .popup-account__container.active .login {
   display: none;
-  margin-left: -50%;
   opacity: 0;
   transition: margin-left 0s ease, opacity 0s ease;
 }
 .popup-account__container.active .recovery {
-  display: block;
+  display: none;
   opacity: 1;
   transition: opacity 0s ease;
+}
+.popup-account__body {
+  display: none;
 }
 .popup-account__title {
   display: inline-block;
@@ -613,6 +623,10 @@ a.green {
   .popup-account__button {
     line-height: calc(40px + 20 * ((100vw - 320px) / 1080));
   }
+}
+
+body.active {
+  overflow: hidden;
 }
 
 .header {

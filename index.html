@@ -68,11 +68,10 @@
 			</div>
 		</header>
 
-
-		<div class="popup-account__container">
-			<div class="popup-account__close">&times;</div>
-			<div class="popup-account__body login">
-				<form action="#" class="popup-account__forms">
+		<div class="popup-account__bg">
+			<div class="popup-account__container">
+				<div class="popup-account__close">&times;</div>
+				<form action="#" class="popup-account__forms login">
 					<h2 class="popup-account__title">Выполните вход в ваш личный кабинет</h2>
 					<div class="popup-account__item">
 						<label for="login-phone">Номер телефона:</label>
@@ -105,28 +104,29 @@
 						</div>
 					</div>
 				</form>
-			</div>
-			<!-- Восстоновление пароля -->
-			<div class="popup-account__body recovery">
-				<div class="popup-account__close">&times;</div>
-				<form action="#" class="popup-account__forms">
-					<h2 class="popup-account__title">Восстановление пароля</h2>
-					<h3 class="popup-account__sub">Введите Email, с которым вы зарегистрированы на сайте, и нажмите
-						<b>«Восстановить»</b></h3>
-					<div class="popup-account__item">
-						<label for="recovery-email">Ваш email:</label>
-						<input type="text" id="recovery-email" required>
-					</div>
-					<div class="popup-account__recovery">
-						<div>Вспомнили пароль? <a href="#" class="popup-account__link popup-account__login">Выполните вход</a>
+				<!-- Восстоновление пароля -->
+				<div class="popup-account__body">
+					<form action="#" class="popup-account__forms">
+						<h2 class="popup-account__title">Восстановление пароля</h2>
+						<h3 class="popup-account__sub">Введите Email, с которым вы зарегистрированы на сайте, и нажмите
+							<b>«Восстановить»</b></h3>
+						<div class="popup-account__item">
+							<label for="recovery-email">Ваш email:</label>
+							<input type="text" id="recovery-email" required>
 						</div>
-					</div>
-					<div class="popup-account__btn">
-						<a href="" class="popup-account__button btn-green">Восстановить</a>
-					</div>
-				</form>
+						<div class="popup-account__recovery">
+							<div>Вспомнили пароль? <a href="#" class="popup-account__link popup-account__login">Выполните
+									вход</a>
+							</div>
+						</div>
+						<div class="popup-account__btn">
+							<a href="" class="popup-account__button btn-green">Восстановить</a>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
+
 
 		<main>
 			<section class="blog-section">
