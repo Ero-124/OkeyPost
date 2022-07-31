@@ -70,24 +70,23 @@
 
 
 		<div class="popup-account__container">
+			<div class="popup-account__close">&times;</div>
 			<div class="popup-account__body login">
-				<h2 class="popup-account__title">Выполните вход в ваш личный кабинетод</h2>
 				<form action="#" class="popup-account__forms">
-					<div class="popup-account__items">
-						<div class="popup-account__item">
-							<label for="login-phone">Номер телефона:</label>
-							<input type="text" id="login-phone" required>
-						</div>
-						<div class="popup-account__item">
-							<label for="login-email">Ваш email:</label>
-							<input type="text" id="login-email" required>
-						</div>
-						<div class="popup-account__item">
-							<label for="pass">Ваш пароль:</label>
-							<div class="popup-account__pass">
-								<input type="password" class="password" id="pass" required>
-								<i class="fa-solid fa-eye-slash show-hide-pw"></i>
-							</div>
+					<h2 class="popup-account__title">Выполните вход в ваш личный кабинет</h2>
+					<div class="popup-account__item">
+						<label for="login-phone">Номер телефона:</label>
+						<input type="text" id="login-phone" required>
+					</div>
+					<div class="popup-account__item">
+						<label for="login-email">Ваш email:</label>
+						<input type="text" id="login-email" required>
+					</div>
+					<div class="popup-account__item">
+						<label for="pass">Ваш пароль:</label>
+						<div class="popup-account__pass">
+							<input type="password" class="password" id="pass" required>
+							<i class="fa-solid fa-eye-slash show-hide-pw"></i>
 						</div>
 					</div>
 					<div class="popup-account__recovery">
@@ -109,15 +108,14 @@
 			</div>
 			<!-- Восстоновление пароля -->
 			<div class="popup-account__body recovery">
-				<h2 class="popup-account__title">Восстановление пароля</h2>
-				<h3 class="popup-account__sub">Введите Email, с которым вы зарегистрированы на сайте, и нажмите
-					<b>«Восстановить»</b></h3>
+				<div class="popup-account__close">&times;</div>
 				<form action="#" class="popup-account__forms">
-					<div class="popup-account__items">
-						<div class="popup-account__item">
-							<label for="recovery-email">Ваш email:</label>
-							<input type="text" id="recovery-email" required>
-						</div>
+					<h2 class="popup-account__title">Восстановление пароля</h2>
+					<h3 class="popup-account__sub">Введите Email, с которым вы зарегистрированы на сайте, и нажмите
+						<b>«Восстановить»</b></h3>
+					<div class="popup-account__item">
+						<label for="recovery-email">Ваш email:</label>
+						<input type="text" id="recovery-email" required>
 					</div>
 					<div class="popup-account__recovery">
 						<div>Вспомнили пароль? <a href="#" class="popup-account__link popup-account__login">Выполните вход</a>
