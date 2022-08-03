@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Meta теги -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- CSS стили -->
+   <link rel="stylesheet" href="css/fonts.css">
+   <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Заголовок имя документа -->
+   <title>Профиль</title>
+</head>
+
+<body>
+
+   <!-- Оболочка страницы -->
+   <div class="wrapper">
+      <!-- Заголовок  документа  "Header" -->
+      <header class="header">
+         <div class="container-big">
+            <div class="header__inner">
+               <a href="index.html" class="header__logo">
+                  <img src="img/others/logoo.png" alt="OkeyPost logo">
+                  <span>OkeyPost</span>
+               </a>
+               <nav class="header__menu menu" id="sidebar">
+                  <ul class="menu__list">
+                     <li class="menu__item">
+                        <a href="index.html" class="menu__link">Главная</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="profile.html" class="menu__link">Профиль</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="order.html" class="menu__link">Заказы</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="parcels.html" class="menu__link">Посылки</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="transactions.html" class="menu__link">Транзакции</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="addresbook.html" class="menu__link">Адресная книга</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="notifications.html" class="menu__link notifications">Уведомления</a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="header__right-menu menu-profile">
+                  <div class="menu-profile__info">
+                     <img src="img/profile/20220413_002747.jpg" alt="Иконка пользователя">
+                     <span>Erik Khachatryan</span>
+                  </div>
+               </div>
+               <div class="header__burger" id="toggle">
+                  <span></span>
+               </div>
+            </div>
+         </div>
+      </header>
+
+    
+
+      <!-- Контент документа "Main" -->
+      <main>
+         <!-- Блог Информации о профиле -->
+         <section class="main-profile">
+            <div class="container-big">
+               <div class="main-profile__inner">
+                  <div class="main-profile__item item-profile">
+                     <div class="item-profile__block">
+                        <div class="item-profile__clock item-profile__item icon-clock"><span>Лондон: 19 : 10 : 36</span>
+                        </div>
+                        <div class="item-profile__alarm item-profile__item icon-alarm"><span>Пн.-Пт. 09:00-18:00 <wbr>Сб.
+                              09:00-14:00<wbr></span></div>
+                     </div>
+                     <div class="item-profile__block">
+                        <a href="" class="item-profile__change item-profile__item icon-bank"><span>Курс валют</span></a>
+                        <div class="item-profile__bonus item-profile__item icon-dollar"><span>Бонусный счет: £ 0</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-profile__item item-profile">
+                     <div class="item-profile__block">
+                        <div class="item-profile__balance item-profile__item">Ваш баланс: £ 0</div>
+                        <a href="" class="item-profile__add item-profile__item btn-green">Добавить транзакцию</a>
+                     </div>
+                     <div class="item-profile__block">
+                        <a href="" class="item-profile__paypal item-profile__item"><img src="img/others/paypal.png"
+                              alt="Иконка PayPal"></a>
+                        <a href="" class="item-profile__visa item-profile__item"><img src="img/others/visa.png"
+                              alt="Иконка Visa MasterCard"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+
+         <!-- Блог Личный кабинет -->
+         <section class="personal-area">
+            <div class="container-big">
+               <div class="personal-area__inner">
+                  <div class="personal-area__image">
+                     <img src="img/profile/20220413_002747.jpg" alt="Картинка профила" class="personal-area__img">
+                  </div>
+                  <div class="personal-area__item">
+                     <ul class="personal-area__list">
+                        <li class="personal-area__info">
+                           <div class="personal-area__desc"><b>Имя:</b></div>
+                           <div class="personal-area__inf">Erik Khachatryan</div>
+                        </li>
+                        <li class="personal-area__info">
+                           <div class="personal-area__desc"><b>Логин:</b></div>
+                           <div class="personal-area__inf">ero-124</div>
+                        </li>
+                        <li class="personal-area__info">
+                           <div class="personal-area__desc"><b>E-mail:</b></div>
+                           <div class="personal-area__inf">khachatryanero2002@mail.ru</div>
+                        </li>
+                        <li class="personal-area__info">
+                           <div class="personal-area__desc"><b>Телефон:</b></div>
+                           <div class="personal-area__inf">+374 93-45-39-35</div>
+                        </li>
+                        <li class="personal-area__info">
+                           <div class="personal-area__desc"><b>Адрес:</b></div>
+                           <div class="personal-area__inf">Ванадзор. ул. Касьяна 13 д.28</div>
+                        </li>
+                     </ul>
+                     <div class="personal-area__buttons">
+                        <div class="personal-area__btn btn-editing btn-green">Редактировать</div>
+                        <a href="" class="personal-area__btn personal-area__btn-pass">Изменить пароль</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Блог Редактировать личный кабинет -->
+         <section class="personal-area pers-area">
+            <div class="container-big">
+               <div class="personal-area__inner personal-area__inner-str">
+                  <div class="personal-area__image">
+                     <img src="img/profile/20220413_002747.jpg" alt="Картинка профила" class="personal-area__img">
+
+                     <div class="personal-area__file">
+                        <input type="file" id="file-image" class="file-image">
+                        <label for="file-image" class="file-btn btn-green">Выбрать файл</label>
+                     </div>
+                  </div>
+
+                  <div class="personal-area__item item-editing">
+                     <form action="#" class="item-editing__form">
+                        <div class="item-editing__items">
+                           <div class="item-editing__field">
+                              <label for="firstName">Имя:</label>
+                              <input type="text" id="firstName">
+                           </div>
+                           <div class="item-editing__field">
+                              <label for="lastName">Фамилия:</label>
+                              <input type="text" id="lastName">
+                           </div>
+                           <div class="item-editing__field">
+                              <label for="addres">Адрес:</label>
+                              <input type="text" id="addres">
+                           </div>
+                           <div class="item-editing__field">
+                              <label for="login">Логин:</label>
+                              <input type="text" id="login">
+                           </div>
+                           <div class="item-editing__field">
+                              <label for="phoneNumber">Номер телефона:</label>
+                              <input type="text" id="phoneNumber">
+                           </div>
+                           <div class="item-editing__field">
+                              <label for="email">E-mail:</label>
+                              <input type="text" id="email">
+                           </div>
+                        </div>
+                        <div class="item-editing__field item-editing__field-flex">
+                           <input type="checkbox" id="checkbox-edit">
+                           <label for="checkbox-edit">Подписаться на рассылку</label>
+                        </div>
+                        <a href="" class="item-editing__save btn-green">Сохранить</a>
+                     </form>
+
+                  </div>
+               </div>
+            </div>
+         </section>
+
+
+         <!-- Блог Вкладки о Виртуальный адрес, Информация о работе, Реквизиты для оплаты -->
+         <section class="profile-tabs">
+            <div class="container-big">
+               <div class="profile-tabs__inner">
+                  <div class="profile-tabs__buttons">
+                     <button class="profile-tabs__btn active" onclick="openCnt(event, 'addres-info')">Виртуальный адрес</button>
+                     <button class="profile-tabs__btn" onclick="openCnt(event, 'works')">Информация о работе</button>
+                     <button class="profile-tabs__btn" onclick="openCnt(event, 'payment')">Реквизиты для оплаты</button>
+                  </div>
+                  <div class="profile-tabs__item active" id="addres-info">
+                     <div class="profile-tabs__title">Ваш виртуальный адрес:</div>
+                     <ul class="profile-tabs__list">
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Ваш ID Клиента:</div>
+                           <div class="profile-tabs__inf">ОК65564654654</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Name, Surname:</div>
+                           <div class="profile-tabs__inf">Erik Khachatryan</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">First line of address:</div>
+                           <div class="profile-tabs__inf">Unit 5 Cromwell Estate ОК65564654654</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Second line of address:</div>
+                           <div class="profile-tabs__inf">Staffa road UK16988</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">County:</div>
+                           <div class="profile-tabs__inf">London</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Postcode:</div>
+                           <div class="profile-tabs__inf">E10 7QZ</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Town, City:</div>
+                           <div class="profile-tabs__inf">London</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Country:</div>
+                           <div class="profile-tabs__inf">Great Britain</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Telephone:</div>
+                           <div class="profile-tabs__inf">07308187545</div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="profile-tabs__item" id="works">
+                     <div class="profile-tabs__title">Информация по работе с сайтом</div>
+                     <ul class="profile-tabs__list works-info">
+                        <div class="profile-tabs__sub">Как оформить заказ через нас</div>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">В вашем личном кабинете находится кнопка оформить заказ,
+                              нажимая на нее вы переходите на форму оформления
+                              заказа, заполняете все поля ( магазин, ссылка на страницу с товаром, название товара,
+                              цвет, размер,
+                              количество). Если вы хотите заказать несколько товаров то внизу формы находиться кнопка
+                              добавить, нажимаете на
+                              нее и добавляете другие позиции по такому же принципы. В одном заказе можете оформлять
+                              заказы на разные
+                              магазины, можете и на один. Как вам удобнее Вы можете добавить комментарии как к
+                              конкретной позиции так и к
+                              целому заказу. Все условия выкупа, пром кода, акции просьба указывать в комментариях</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Заказ вы можете сразу не отправлять, если вы хотите что то
+                              добавить позже. При нажатии кнопки сохранить , заказ
+                              только сохранится. Вы можете к нему вернуться и добавить новые позиции или внести
+                              изменения</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">После того как вы готовы оформить заказ, нажмите кнопку
+                              отправить, далее вы увидите список всех позиций с общей
+                              суммой заказа, после того как вы убедитесь что все правильно, нажмите кнопку подтвердить и
+                              мы моментально
+                              получим Ваш заказ</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Заказ выкупается только после получения предоплаты или наличия
+                              положительного баланса на вашем счету у нас
+                           </div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Все оформленные заказы ( отправленные нам на выкуп) вы можете
+                              найти разделе В ОБРАБОТКЕ, где указана дата и
+                              статус заказа. Если Ваш заказ не выкуплен ( не собралось компашки на фри шип) вы можете
+                              переслать заказ, нажав
+                              на кнопку продублировать
+                           </div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Как только Ваш заказ будет выкуплен, вам на почту придет
+                              емайл, подтверждающий выкуп. Очень часто заказы
+                              оформляться в компашках для того чтобы вы не тратились на доставку по Англии, так как
+                              многие магазины
+                              доставляют бесплатно в зависимости от суммы заказа. Наши сотрудники всегда стараются
+                              оформить заказ с
+                              бесплатной доставкой. Если заказ выкуплен в компашке, сумма вашего заказа будет указана
+                              теме емайла В
+                              дальнейшем заказ отобразиться в Вашем личном кабинете, в разделе ВЫКУПЛЕННЫЕ заказы. Вы
+                              можете посмотреть какие
+                              именно товары выкупились при нажатии кнопки Просмотр Товара
+                           </div>
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__sub">Как оформить самостоятельный выкуп ( виртуальный заказ)</div>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">В вашем личном кабинете есть кнопочка Ваш виртуальный адрес.
+                              Это адрес доставки ваших заказов. При регистрации в магазинах Англии вы указываете ваш
+                              биллинг адрес , а наш адрес доставки. Обязательно указываете ФИО. Адрес должен быть указан
+                              так как в вашем кабинете.</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">После отгрузки заказа, магазин пришлет Вам трек номер. Внесите
+                              трек номер на сайт, нажав на кнопочку Оформить виртуальный заказ.</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Как только мы получим Ваш заказ, вы получите уведомление о
+                              приходе к нам на склад</div>
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__sub">Оплата</div>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf"> В разделе Посылки есть кнопочка сформировать посылку, при
+                              нажатии на нее вы сможете выбрать заказы, которые вы хотите упаковать в конкретную посылку
+                              и выбрать способ доставки. Мы получим запрос и в течении рабочего дня мы выполнит Ваш
+                              запрос</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Как только мы соберем посылку, внесем вес и стоимость доставки
+                              Вы получите емайл, уведомлявший вас о оплате
+                              доставки и просьбе заполнить таможенную декларацию</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">На каждую отправляемую посылку оформляться таможенная
+                              декларация, ее вы можете найти справа возле каждой
+                              Посылки. Выберите Адрес доставки из адресной книги, заполнить все поля и укажите
+                              таможенную стоимость Посылки
+                              Если вы хотите чтобы мы заполонили таможенную декларация вы можете сделать запрос на
+                              заполнение, только
+                              обязательно выберите данные для доставки , остальное мы можем сделать за Вас</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">После получения нами оплаты, посылка будет отправлена</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Просим обратить внимания на дни отправки. Пожалуйста
+                              оформляйте и оплачивайте Посылки вовремя</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf"> Очень важный раздел Адресная книга. Все получатели должны
+                              быть внесены именно в адресную книгу, так как данные
+                              для отправки посылок система выбирает именно из адресной книги</div>
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__sub">Заказы</div>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">В обработке - это заказы, отправленные вами</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Выкупленные заказы - заказы, уже Выкупленные нами или Ваши
+                              виртуальные заказы</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Пришедшие заказы - заказы, поступившие на склад, указана дата
+                              прихода и вес</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Упакованные заказы - заказы, упакованные в Посылки, ожидающие
+                              отправки</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Отправленные заказы - заказы, высланные нами</div>
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__sub">Посылки</div>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Запрос отправлен - Вы отправили запрос на формирование Посылки
+                           </div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">В обработке - наши работники, собирают и упаковывают Ваши
+                              заказы</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Ожидает оплаты и заполнения деклараций - посылка упакована и
+                              ждет оплаты и заполнения деклараций</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf"> Сформированные</div>
+                        </li>
+                        <li class="profile-tabs__info works-info">
+                           <div class="profile-tabs__inf">Отправленные - Посылки, отправленные с нашего склада с
+                              указанием трек номера</div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="profile-tabs__item" id="payment">
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__title">Privat 24</div>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Номер карточки:</div>
+                           <div class="profile-tabs__inf">4462617345592244</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">ФИО:</div>
+                           <div class="profile-tabs__inf">Jelena Boikova</div>
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__title">Тинькофф</div>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Номер карточки:</div>
+                           <div class="profile-tabs__inf">4462617345592244</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">ФИО:</div>
+                           <div class="profile-tabs__inf">Jelena Boikova</div>
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__title">Paypal</div>
+                        <li class="profile-tabs__info">
+                           <img src="img/others/paypal.png" alt="PayPal">
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__title">Card-PayZone</div>
+                        <li class="profile-tabs__info">
+                           <img src="img/others/visa.png" alt="Visa MasterCard">
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__title">Unistream</div>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Name:</div>
+                           <div class="profile-tabs__inf">Mykhaylo Prykhodko</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Tel:</div>
+                           <div class="profile-tabs__inf">00447782164776</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Branch:</div>
+                           <div class="profile-tabs__inf">London-Unistream</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Adress:</div>
+                           <div class="profile-tabs__inf">Canary Wharf Beatty House, Admirals Way 5 E14 9UF</div>
+                        </li>
+                     </ul>
+                     <ul class="profile-tabs__list">
+                        <div class="profile-tabs__title">SWIFT</div>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">ФИО:</div>
+                           <div class="profile-tabs__inf">Mykhaylo Prykhodko</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Адрес проживания:</div>
+                           <div class="profile-tabs__inf">Unit 1 Cromwell industrial Estate, Staffa Road, E10 7QZ,
+                              London</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Branch:</div>
+                           <div class="profile-tabs__inf">London-Unistream</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Aдрес и название отделения банка:</div>
+                           <div class="profile-tabs__inf">Westfiled Stratford City, E20</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Branch:</div>
+                           <div class="profile-tabs__inf">40-43-65</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Номер счета (Account number):</div>
+                           <div class="profile-tabs__inf">60019836</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">IBAN:</div>
+                           <div class="profile-tabs__inf">GB46HBUK40436560019836</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">SWIFTBIC:</div>
+                           <div class="profile-tabs__inf">HBUKGB4194C</div>
+                        </li>
+                        <li class="profile-tabs__info">
+                           <div class="profile-tabs__desc">Телефон получателя:</div>
+                           <div class="profile-tabs__inf">00447782164776</div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+
+
+      </main>
+      <!-- Подвал докимента "Footer" -->
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__inner">
+               <div class="footer__items">
+                  <div class="footer__item item-footer">
+                     <a href="index.html" class="item-footer__logo header__logo">
+                        <img src="img/others/logoo.png" alt="OkeyPost logo">
+                        <span>OkeyPost</span>
+                     </a>
+                     <div class="item-footer__social">
+                        <a href="">
+                           <i class="icon-whatsapp"></i>
+                        </a>
+                        <a href="">
+                           <i class="icon-viber"></i>
+                        </a>
+                        <a href="">
+                           <i class="icon-sms"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer__items">
+                  <div class="footer__item item-footer">
+                     <nav class="item-footer__navigation navigation-footer">
+                        <ul class="navigation-footer__list">
+                           <li class="navigation-footer__title footer-title"><b>О компании</b></li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Услуги</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Цены</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Отзывы</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Контакты</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Вакансии</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Соглашение о персональных данных</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Условия использования</a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+               <div class="footer__items">
+                  <div class="footer__item item-footer">
+                     <div class="item-footer__useful useful-footer">
+                        <ul class="useful-footer__list navigation-footer__list">
+                           <li class="useful-footer__title footer-title"><b>Полезное</b></li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Как работает наш
+                                 сервис</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link"> Как покупать с
+                                 оператором</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Ответы на частые
+                                 вопросы</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Популярные магазины</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Черный список
+                                 магазинов</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Актуальные
+                                 распродажи</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer__items">
+                  <div class="footer__item item-footer">
+                     <div class="item-footer__special-projects special-projects">
+                        <ul class="special-projects__list navigation-footer__list">
+                           <li class="special-projects__title footer-title"><b>Спецпроекты</b></li>
+                           <li class="special-projects__item navigation-footer__item">
+                              50% на первую доставку
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              Скидки для постоянных клиентов
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              Реферальная программа
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              Кэшбек Mr. Rebates и Rakuten
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              Stop Fraud
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__copyright">
+               © 2021 Okeypost . Все права защищены.
+            </div>
+         </div>
+      </footer>
+   </div>
+
+
+   <!-- Скрипты JS -->
+   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>
