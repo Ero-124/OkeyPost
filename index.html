@@ -70,43 +70,42 @@
 
 		<div class="popup-account__bg">
 			<div class="popup-account__container">
-				<div class="popup-account__close">&times;</div>
-				<form action="#" class="popup-account__forms login">
-					<h2 class="popup-account__title">Выполните вход в ваш личный кабинет</h2>
-					<div class="popup-account__item">
-						<label for="login-phone">Номер телефона:</label>
-						<input type="text" id="login-phone" required>
-					</div>
-					<div class="popup-account__item">
-						<label for="login-email">Ваш email:</label>
-						<input type="text" id="login-email" required>
-					</div>
-					<div class="popup-account__item">
-						<label for="pass">Ваш пароль:</label>
-						<div class="popup-account__pass">
-							<input type="password" class="password" id="pass" required>
-							<i class="fa-solid fa-eye-slash show-hide-pw"></i>
+				<div class="popup-account__square">
+					<div class="popup-account__close">&times;</div>
+					<form action="#" class="popup-account__signin">
+						<h2 class="popup-account__title">Выполните вход в ваш личный кабинет</h2>
+						<div class="popup-account__item">
+							<label for="login-phone">Номер телефона:</label>
+							<input type="text" id="login-phone" required>
 						</div>
-					</div>
-					<div class="popup-account__recovery">
-						<div><a href="#" class="popup-account__link popup-account__recovery-link">Восстановление пароля</a>
-							или <a href="" class="popup-account__link popup-account__signup-link">быстрая регистрация</a>
+						<div class="popup-account__item">
+							<label for="login-email">Ваш email:</label>
+							<input type="text" id="login-email" required>
 						</div>
-					</div>
-					<div class="popup-account__item-soc">
-						<div class="popup-account__btn">
-							<a href="" class="popup-account__button btn-green">Войти</a>
+						<div class="popup-account__item">
+							<label for="pass">Ваш пароль:</label>
+							<div class="popup-account__pass">
+								<input type="password" class="password" id="pass" required>
+								<i class="fa-solid fa-eye-slash show-hide-pw"></i>
+							</div>
 						</div>
-						<div class="popup-account__social">
-							<a href="" class="icon-google"></a>
-							<a href="" class="icon-facebook"></a>
-							<a href="" class="icon-vk"></a>
+						<div class="popup-account__recovery">
+							<a href="#" class="popup-account__link popup-account__recovery-link">Восстановление пароля</a>
+							или <a href="#" class="popup-account__link popup-account__login-link">быстрая регистрация</a>
 						</div>
-					</div>
-				</form>
-				<!-- Восстоновление пароля -->
-				<div class="popup-account__body">
-					<form action="#" class="popup-account__forms">
+						<div class="popup-account__item-soc">
+							<div class="popup-account__btn">
+								<a href="" class="popup-account__button btn-green">Войти</a>
+							</div>
+							<div class="popup-account__social">
+								<a href="" class="icon-google"></a>
+								<a href="" class="icon-facebook"></a>
+								<a href="" class="icon-vk"></a>
+							</div>
+						</div>
+					</form>
+					<!-- Восстоновление пароля -->
+					<form action="#" class="popup-account__recov">
 						<h2 class="popup-account__title">Восстановление пароля</h2>
 						<h3 class="popup-account__sub">Введите Email, с которым вы зарегистрированы на сайте, и нажмите
 							<b>«Восстановить»</b></h3>
@@ -115,12 +114,42 @@
 							<input type="text" id="recovery-email" required>
 						</div>
 						<div class="popup-account__recovery">
-							<div>Вспомнили пароль? <a href="#" class="popup-account__link popup-account__login">Выполните
+							<div>Вспомнили пароль? <a href="#" class="popup-account__link popup-account__signin-link">Выполните
 									вход</a>
 							</div>
 						</div>
 						<div class="popup-account__btn">
 							<a href="" class="popup-account__button btn-green">Восстановить</a>
+						</div>
+					</form>
+					<!-- Регистрация -->
+					<form action="#" class="popup-account__login">
+						<h2 class="popup-account__title">Регистрация</h2>
+						<div class="popup-account__item">
+							<label for="register-firstName">Имя:</label>
+							<input type="text" id="register-firstName" required>
+						</div>
+						<div class="popup-account__item">
+							<label for="register-lastName">Фамилия:</label>
+							<input type="text" id="register-lastName" required>
+						</div>
+						<div class="popup-account__item">
+							<label for="register-email">Ваш email:</label>
+							<input type="text" id="register-email" required>
+						</div>
+						<div class="popup-account__item">
+							<label for="register-login">Ваш логин:</label>
+							<input type="text" id="register-login" required>
+						</div>
+						<div class="popup-account__item">
+							<label for="register-password">Ваш пароль:</label>
+							<input type="text" id="register-password" required>
+						</div>
+						<div class="popup-account__recovery">
+							<a href="#" class="popup-account__link popup-account__signin-lnk">Выполните вход</a>
+						</div>
+						<div class="popup-account__btn">
+							<a href="" class="popup-account__button btn-green">Регистрация</a>
 						</div>
 					</form>
 				</div>

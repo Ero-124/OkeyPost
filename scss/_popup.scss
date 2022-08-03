@@ -43,7 +43,11 @@
             transform 200ms ease-in-out 0s;
       }
 
-      
+      .popup-account__square {
+         display: flex;
+      }
+
+
 
       .popup-account__close {
          position: absolute;
@@ -59,33 +63,15 @@
          cursor: pointer;
       }
 
+      .popup-account__signin {
 
-      .recovery {
+      }
+      .popup-account__recov {
          display: none;
-         opacity: 0;
-         transition: opacity 0s ease;
       }
-
-      &.active {
-         display: flex;
-
-         .login {
-            display: none;
-            opacity: 0;
-            transition: margin-left 0s ease, opacity 0s ease;
-         }
-
-         .recovery {
-            display: none;
-            opacity: 1;
-            transition: opacity 0s ease;
-         }
+      .popup-account__login {
+         display: none;
       }
-   }
-
-   // .popup-account__body
-   &__body {
-      display: none;
    }
 
 
@@ -230,9 +216,9 @@
       margin: 9px 0px 0px 0px;
    }
 
-   // .popup-account__login
+   // .popup-account__signin
 
-   &__login {}
+   &__signin {}
 
    // .popup-account__button
 

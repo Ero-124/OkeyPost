@@ -1,7 +1,0 @@
-.popular-stores__inner {
-  display: flex;
-  flex-wrap: wrap;
-}
-.popular-stores__items {
-  flex: 0 0 20%;
-}
