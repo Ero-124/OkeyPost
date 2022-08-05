@@ -134,21 +134,15 @@
                         </li>
                      </ul>
                      <div class="personal-area__buttons">
-                        <div class="personal-area__btn btn-editing btn-green">Редактировать</div>
-                        <a href="" class="personal-area__btn personal-area__btn-pass">Изменить пароль</a>
+                        <button onclick="showInnerStr()" class="personal-area__btn personal-area__btn-editing btn-green">Редактировать</button>
+                        <button onclick="showInnerPass()" class="personal-area__btn-pass">Изменить пароль</button>
                      </div>
                   </div>
                </div>
-            </div>
-         </section>
-
-         <!-- Блог Редактировать личный кабинет -->
-         <section class="personal-area pers-area">
-            <div class="container-big">
+               <!-- Редактировать личный кабинет -->
                <div class="personal-area__inner personal-area__inner-str">
                   <div class="personal-area__image">
                      <img src="img/profile/20220413_002747.jpg" alt="Картинка профила" class="personal-area__img">
-
                      <div class="personal-area__file">
                         <input type="file" id="file-image" class="file-image">
                         <label for="file-image" class="file-btn btn-green">Выбрать файл</label>
@@ -188,13 +182,39 @@
                            <label for="checkbox-edit">Подписаться на рассылку</label>
                         </div>
                         <a href="" class="item-editing__save btn-green">Сохранить</a>
+                        <button onclick="editingCancel()" class="item-editing__cancel btn-green">Отменить</button>
                      </form>
 
                   </div>
                </div>
+
+               <div class="personal-area__inner personal-area__inner-str personal-area__inner-pass">
+                  <div class="personal-area__image">
+                     <img src="img/profile/20220413_002747.jpg" alt="Картинка профила" class="personal-area__img">
+                  </div>
+                  <div class="personal-area__item item-editing">
+                     <form action="#" class="item-editing__form">
+                        <div class="item-editing__items">
+                           <div class="item-editing__field">
+                              <label for="oldPass">Старый пароль:</label>
+                              <input type="text" id="oldPass">
+                           </div>
+                           <div class="item-editing__field">
+                              <label for="newPass">Новый пароль:</label>
+                              <input type="text" id="newPass">
+                           </div>
+                           <div class="item-editing__field">
+                              <label for="newPassAgain">Новый пароль еще раз:</label>
+                              <input type="text" id="newPassAgain">
+                           </div>
+                        </div>
+                        <a href="" class="item-editing__save btn-green">Сохранить</a>
+                        <button onclick="editingCancel()" href="" class="item-editing__cancel btn-green">Отменить</button>
+                     </form>
+                  </div>
+               </div>
             </div>
          </section>
-
 
          <!-- Блог Вкладки о Виртуальный адрес, Информация о работе, Реквизиты для оплаты -->
          <section class="profile-tabs">

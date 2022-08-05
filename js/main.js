@@ -17,6 +17,8 @@ toggle.onclick = function () {
 };
 
 
+/* Slider Swiper profitable__swiper  */
+
 const profitable__swiper = new Swiper('.profitable__swiper', {
 
 	// Navigation arrows
@@ -42,6 +44,8 @@ const profitable__swiper = new Swiper('.profitable__swiper', {
 	}
 });
 
+
+/* Slider Swiper profitable__swiper-two  */
 const profitable__swiper_two = new Swiper('.profitable__swiper-two', {
 
 	// Navigation arrows
@@ -57,9 +61,9 @@ const profitable__swiper_two = new Swiper('.profitable__swiper-two', {
 
 
 
+/* Вкладки для help-question__item  */
 
 const item = document.getElementsByClassName("help-question__item");
-
 for (let i = 0; i < item.length; i++) {
 	item[i].addEventListener("click", function () {
 		this.classList.toggle("active");
@@ -67,11 +71,8 @@ for (let i = 0; i < item.length; i++) {
 }
 
 
-
-
+/* Попапы для входа аккаунт, регистрации, забыли пароль */
 const popupBg = document.querySelector(".popup-account__bg");
-
-
 const openPopup = document.querySelector(".right-menu__login");
 const closeBtn = document.querySelector(".popup-account__close");
 
@@ -86,9 +87,6 @@ closeBtn.addEventListener("click", function () {
 	document.body.classList.remove("active");
 	popupBg.classList.remove("active");
 })
-
-
-
 
 
 
@@ -124,11 +122,8 @@ signin2.addEventListener("click", function () {
 })
 
 
-
 const pwShowHide = document.querySelectorAll(".show-hide-pw");
 const pwFields = document.querySelectorAll(".password");
-
-
 
 pwShowHide.forEach(eyeIcon => {
 	eyeIcon.addEventListener("click", () => {
@@ -152,13 +147,51 @@ pwShowHide.forEach(eyeIcon => {
 
 
 
+/* Показывать блока Редактирование профиль */
+
+function showInnerStr() {
+	const persInnerStr = document.querySelector(".personal-area__inner-str");
+	const persInner = document.querySelector(".personal-area__inner");
+	const profileTabs = document.querySelector(".profile-tabs");
+
+	if (persInnerStr.style.display = "none") {
+		persInnerStr.style.display = 'flex';
+		persInner.style.display = "none"
+		profileTabs.style.display = "none"
+	}
+}
+
+/* Показывать блока сменить пароль */
+function showInnerPass() {
+	const persInnerStr = document.querySelector(".personal-area__inner-str");
+	const persInner = document.querySelector(".personal-area__inner");
+	const profileTabs = document.querySelector(".profile-tabs");
+	const persInnerPass = document.querySelector(".personal-area__inner-pass");
+
+	if (persInnerPass.style.display = 'none') {
+		persInnerPass.style.display = 'flex';
+		persInnerStr.style.display = 'none';
+		persInner.style.display = "none"
+		profileTabs.style.display = "none"
+	}
+}
+
+
+function editingCancel() {
+	const persInnerStr = document.querySelector(".personal-area__inner-str");
+	const persInner = document.querySelector(".personal-area__inner");
+	const profileTabs = document.querySelector(".profile-tabs");
+	const persInnerPass = document.querySelector(".personal-area__inner-pass");
+
+	persInnerPass.style.display = 'none';
+	persInnerStr.style.display = 'none';
+	persInner.style.display = "flex"
+	profileTabs.style.display = "block"
+}
 
 
 
-
-
-
-
+/* Табы для profile-tabs__item */
 function openCnt(evt, info) {
 	let i, tabcontent, tablinks;
 	tabcontent = document.getElementsByClassName("profile-tabs__item");
@@ -173,17 +206,4 @@ function openCnt(evt, info) {
 
 	document.getElementById(info).style.display = "block";
 	evt.currentTarget.className += " active"
-
 }
-
-
-
-
-let btnEdit = document.querySelector(".btn-editing");
-let personalArea = document.querySelector(".personal-area");
-let persArea = document.querySelector(".personal-area.pers-area");
-
-btnEdit.addEventListener("click", function() {
-	btnEdit.classList.add('active');
-})
-

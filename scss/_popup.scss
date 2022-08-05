@@ -62,18 +62,15 @@
          text-align: center;
          cursor: pointer;
       }
-
-      .popup-account__signin {
-
-      }
       .popup-account__recov {
          display: none;
+         width: 100%;
       }
       .popup-account__login {
          display: none;
+         width: 100%;
       }
    }
-
 
    // .popup-account__title
 
@@ -147,6 +144,7 @@
    &__link {
       font-weight: 400;
       color: #01CD7D;
+      background-color: transparent;
 
       @media (min-width: 991.98px) {
          &:hover {

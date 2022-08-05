@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Meta теги -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- CSS стили -->
+   <link rel="stylesheet" href="css/fonts.css">
+   <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Заголовок имя документа -->
+   <title>Профиль</title>
+</head>
+
+<body>
+
+   <!-- Оболочка страницы -->
+   <div class="wrapper">
+      <!-- Заголовок  документа  "Header" -->
+      <header class="header">
+         <div class="container-big">
+            <div class="header__inner">
+               <a href="index.html" class="header__logo">
+                  <img src="img/others/logoo.png" alt="OkeyPost logo">
+                  <span>OkeyPost</span>
+               </a>
+               <nav class="header__menu menu" id="sidebar">
+                  <ul class="menu__list">
+                     <li class="menu__item">
+                        <a href="index.html" class="menu__link">Главная</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="profile.html" class="menu__link">Профиль</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="order.html" class="menu__link">Заказы</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="parcels.html" class="menu__link">Посылки</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="transactions.html" class="menu__link">Транзакции</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="addresbook.html" class="menu__link">Адресная книга</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="notifications.html" class="menu__link notifications">Уведомления</a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="header__right-menu menu-profile">
+                  <div class="menu-profile__info">
+                     <img src="img/profile/20220413_002747.jpg" alt="Иконка пользователя">
+                     <span>Erik Khachatryan</span>
+                  </div>
+               </div>
+               <div class="header__burger" id="toggle">
+                  <span></span>
+               </div>
+            </div>
+         </div>
+      </header>
+
+
+
+      <!-- Контент документа "Main" -->
+      <main>
+         <!-- Блог Информации о профиле -->
+         <section class="main-profile">
+            <div class="container-big">
+               <div class="main-profile__inner">
+                  <div class="main-profile__item item-profile">
+                     <div class="item-profile__block">
+                        <div class="item-profile__clock item-profile__item icon-clock"><span>Лондон: 19 : 10 : 36</span>
+                        </div>
+                        <div class="item-profile__alarm item-profile__item icon-alarm"><span>Пн.-Пт. 09:00-18:00 <wbr>Сб.
+                              09:00-14:00<wbr></span></div>
+                     </div>
+                     <div class="item-profile__block">
+                        <a href="" class="item-profile__change item-profile__item icon-bank"><span>Курс валют</span></a>
+                        <div class="item-profile__bonus item-profile__item icon-dollar"><span>Бонусный счет: £ 0</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-profile__item item-profile">
+                     <div class="item-profile__block">
+                        <div class="item-profile__balance item-profile__item">Ваш баланс: £ 0</div>
+                        <a href="" class="item-profile__add item-profile__item btn-green">Добавить транзакцию</a>
+                     </div>
+                     <div class="item-profile__block">
+                        <a href="" class="item-profile__paypal item-profile__item"><img src="img/others/paypal.png"
+                              alt="Иконка PayPal"></a>
+                        <a href="" class="item-profile__visa item-profile__item"><img src="img/others/visa.png"
+                              alt="Иконка Visa MasterCard"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+
+         <!-- Блог Заказы пользователя -->
+         <section class="order">
+            <div class="container-big">
+               <div class="order__inner">
+                  <div class="order__items">
+                     <div class="order__heading">
+                        <div class="order__title">Заказы пользователя Dmitro Karimov</div>
+                        <button class="order__new btn-green">Добавить новый заказ</button>
+                     </div>
+                     <div class="order__info">
+                        <div class="order__buttons profile-tabs__buttons">
+                           <button class="order__btn profile-tabs__btn active"
+                              onclick="openCnt(event, 'all-orders')">Все</button>
+                           <button class="order__btn profile-tabs__btn" onclick="openCnt(event, 'my-orders')">Мои
+                              заказы</button>
+                        </div>
+                        <div class="order__searching">
+                           <form action="#">
+                              <div class="order__fields">
+                                 <input type="text" class="order__search" placeholder="Поиск по трек номеру">
+                                 <i class="icon-sfearch"></i>
+                              </div>
+                              <div class="order__filter">
+                                 <button><img src="img/order/filter.svg" alt="Иконка Филтер"></button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="order__columns">
+                        <div class="icon-info"></div>
+                        <div class="order__item">
+                           <table class="order__table">
+                              <tr>
+                                 <th>Дата</th>
+                                 <th>ID Заказа</th>
+                                 <th>Трек номер</th>
+                                 <th>Магазин</th>
+                                 <th>Вес</th>
+                                 <th>Сумма</th>
+                                 <th>Статус</th>
+                                 <th>Выкуплен</th>
+                                 <th>Комментарии</th>
+                                 <th></th>
+                              </tr>
+                              <tr>
+                                 <td>11.11.2021</td>
+                                 <td>35657</td>
+                                 <td>231234234234234</td>
+                                 <td>Levis</td> 
+                                 <td>152.33 kg</td>
+                                 <td>£568.00</td>
+                                 <td><i class="icon-clock"></i></td>
+                                 <td><i class="icon-user"></i></td>
+                                 <td><i class="icon-document"></i></td>
+                                 <td><button disabled>В обработке</button></td>
+                              </tr>
+                              <tr>
+                                 <td>11.11.2021</td>
+                                 <td>35657</td>
+                                 <td>231234234234234</td>
+                                 <td>Levis</td>
+                                 <td>152.33 kg</td>
+                                 <td>£568.00 <i class="icon-info"></i></td>
+                                 <td><i class="icon-dollar"></i></td>
+                                 <td><i class="icon-clock"></i></td>
+                                 <td><i class="icon-document"></i></td>
+                                 <td></td>
+                              </tr>
+                              <tr>
+                                 <td>11.11.2021</td>
+                                 <td>35657</td>
+                                 <td>231234234234234</td>
+                                 <td>Levis</td>
+                                 <td>152.33 kg</td>
+                                 <td>£568.00 <i class="icon-info"></i></td>
+                                 <td><i class="icon-location"></i></td>
+                                 <td><i class="icon-user"></i></td>
+                                 <td><i class="icon-document"></i></td>
+                                 <td></td>
+                              </tr>
+                              <tr>
+                                 <td>11.11.2021</td>
+                                 <td>35657</td>
+                                 <td>231234234234234</td>
+                                 <td>Levis</td>
+                                 <td>152.33 kg</td>
+                                 <td>£568.00 <i class="icon-info"></i></td>
+                                 <td><i class="icon-box"></i></td>
+                                 <td><i class="icon-user"></i></td>
+                                 <td><i class="icon-document"></i></td>
+                                 <td></td>
+                              </tr>
+                              <tr>
+                                 <td>11.11.2021</td>
+                                 <td>35657</td>
+                                 <td>231234234234234</td>
+                                 <td>Levis</td>
+                                 <td>152.33 kg</td>
+                                 <td>£568.00 <i class="icon-info"></i></td>
+                                 <td><i class="icon-check"></i></td>
+                                 <td><i class="icon-clock"></i></td>
+                                 <td><i class="icon-document"></i></td>
+                                 <td><button class="border">Отменить</button></td>
+                                 <td></td>
+                              </tr>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+
+
+               </div>
+            </div>
+         </section>
+
+
+      </main>
+      <!-- Подвал докимента "Footer" -->
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__inner">
+               <div class="footer__items">
+                  <div class="footer__item item-footer">
+                     <a href="index.html" class="item-footer__logo header__logo">
+                        <img src="img/others/logoo.png" alt="OkeyPost logo">
+                        <span>OkeyPost</span>
+                     </a>
+                     <div class="item-footer__social">
+                        <a href="">
+                           <i class="icon-whatsapp"></i>
+                        </a>
+                        <a href="">
+                           <i class="icon-viber"></i>
+                        </a>
+                        <a href="">
+                           <i class="icon-sms"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer__items">
+                  <div class="footer__item item-footer">
+                     <nav class="item-footer__navigation navigation-footer">
+                        <ul class="navigation-footer__list">
+                           <li class="navigation-footer__title footer-title"><b>О компании</b></li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Услуги</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Цены</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Отзывы</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Контакты</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Вакансии</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Соглашение о персональных данных</a>
+                           </li>
+                           <li class="navigation-footer__item">
+                              <a href="" class="navigation-footer__link">Условия использования</a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+               <div class="footer__items">
+                  <div class="footer__item item-footer">
+                     <div class="item-footer__useful useful-footer">
+                        <ul class="useful-footer__list navigation-footer__list">
+                           <li class="useful-footer__title footer-title"><b>Полезное</b></li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Как работает наш
+                                 сервис</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link"> Как покупать с
+                                 оператором</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Ответы на частые
+                                 вопросы</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Популярные магазины</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Черный список
+                                 магазинов</a>
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              <a href="" class="useful-footer__link navigation-footer__link">Актуальные
+                                 распродажи</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer__items">
+                  <div class="footer__item item-footer">
+                     <div class="item-footer__special-projects special-projects">
+                        <ul class="special-projects__list navigation-footer__list">
+                           <li class="special-projects__title footer-title"><b>Спецпроекты</b></li>
+                           <li class="special-projects__item navigation-footer__item">
+                              50% на первую доставку
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              Скидки для постоянных клиентов
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              Реферальная программа
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              Кэшбек Mr. Rebates и Rakuten
+                           </li>
+                           <li class="useful-footer__item navigation-footer__item">
+                              Stop Fraud
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__copyright">
+               © 2021 Okeypost . Все права защищены.
+            </div>
+         </div>
+      </footer>
+   </div>
+
+
+   <!-- Скрипты JS -->
+   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>
