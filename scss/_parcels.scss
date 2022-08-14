@@ -1,0 +1,206 @@
+.parcels {
+
+
+   button {
+      @include adaptiv-value("width", 250, 120, 5);
+      @include adaptiv-value("height", 60, 30, 5);
+      @include adaptiv-value("line-height", 60, 30, 5);
+      @include adaptiv-value("font-size", 15, 11, 5);
+   }
+
+   // .parcels__heading
+
+   &__heading {
+      display: block;
+   }
+
+   // .parcels__checkbox
+
+   &__checkbox {
+      display: flex;
+      align-items: center;
+      @include adaptiv-value("margin-bottom", 60, 20, 1);
+
+   }
+
+   // .parcels__checkbox-fields
+
+   &__checkbox-fields {
+      display: flex;
+      align-items: center;
+      @include adaptiv-value("margin-right", 40, 20, 5);
+
+      &:last-child {
+         margin: 0px 0px 0px 0px;
+      }
+
+      input[type=checkbox] {
+         @include adaptiv-value("width", 31, 14, 5);
+         @include adaptiv-value("height", 31, 14, 5);
+         @include adaptiv-value("margin-right", 18, 7, 5);
+      }
+
+      label {
+         font-weight: 600;
+         @include adaptiv-value("font-size", 18, 12, 1);
+         line-height: 150%;
+      }
+   }
+
+
+
+   // .parcels__item
+
+   &__item {
+      @include adaptiv-value("padding-bottom", 64, 30, 5);
+      @include adaptiv-value("margin-bottom", 40, 20, 5);
+      border-bottom: 1px solid #C0C9D7;
+
+      label {
+         font-weight: 700;
+         @include adaptiv-value("font-size", 18, 12, 5);
+         line-height: 200%;
+      }
+   }
+
+   .order {
+
+      // .order__inner
+
+      &__inner {}
+
+      // .order__heading
+
+      &__heading {
+         @include adaptiv-value("padding-bottom", 23, 10, 5);
+         @include adaptiv-value("margin-bottom", 40, 20, 5);
+         border-bottom: 1px solid #C0C9D7;
+      }
+
+      // .order__title
+
+      &__title {
+         @include adaptiv-value("margin-bottom", 20, 10, 5);
+      }
+
+      // .order__subtitle
+
+      &__subtitle {
+         font-weight: 700;
+         @include adaptiv-value("font-size", 18, 12, 5);
+         line-height: 180%;
+      }
+
+      // .order__sub
+
+      &__sub {
+         font-weight: 300;
+         @include adaptiv-value("font-size", 18, 12, 5);
+         line-height: 200%;
+      }
+
+
+
+      // .order__form-inner
+
+      &__form-inner {
+         display: block;
+
+         select {
+            font-weight: 300;
+            @include adaptiv-value("font-size", 14, 12, 5);
+            color: #222222;
+            opacity: 0.6;
+            cursor: pointer;
+            position: relative;
+            background: #FCFDFF;
+            border: 1px solid #C0C9D7;
+            border-radius: 6px;
+            @include adaptiv-value("height", 60, 40, 5);
+            @include adaptiv-value("padding", 10, 7, 5);
+         }
+
+         label {
+            display: block;
+         }
+      }
+
+
+
+      // .order__fields
+
+      &__fields {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: flex-end;
+         position: relative;
+         flex: 0 0 37%;
+
+         select {
+            width: 100%;
+         }
+      }
+
+      // .order__fields-fl
+
+      &__fields-fl {
+         flex: 0 0 37%;
+         @include adaptiv-value("margin-right", 20, 10, 5);
+
+
+         select {
+            width: 100%;
+         }
+      }
+
+      // .order__fields-fld
+
+      &__fields-fld {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         @include adaptiv-value("margin-right", 20, 10, 5);
+      }
+
+      // .order__new-addres
+
+      &__new-addres {
+         @include adaptiv-value("width", 250, 180, 5);
+         @include adaptiv-value("height", 60, 40, 5);
+         @include adaptiv-value("line-height", 60, 40, 5);
+      }
+
+      // .order__flex
+
+      &__flex {
+         display: flex;
+
+         .order__fields-fld {}
+      }
+   }
+
+   @media (max-width: 991.98px) {
+      .parcels__checkbox {
+         flex-wrap: wrap;
+      }
+
+      .parcels__checkbox-fields {
+         margin: 0px 10px 15px 0px;
+      }
+   }
+
+   @media (max-width: 767.98px) {
+      .order__fields-fl {
+         flex: 0 0 100%;
+         margin: 0px 0px 10px 0px;
+      }
+
+      .order__fields {
+         flex: 0 0 50%;
+      }
+   }
+
+   @media (max-width: 479.98px) {
+      .order__fields-fl {}
+   }
+}

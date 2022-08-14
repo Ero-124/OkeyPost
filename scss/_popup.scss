@@ -14,7 +14,8 @@
    }
 
    // .popup-account__container
-   &__container {
+   &__container,
+   &__container-pay {
       position: absolute;
       top: -150%;
       left: 50%;
@@ -47,8 +48,6 @@
          display: flex;
       }
 
-
-
       .popup-account__close {
          position: absolute;
          top: 10px;
@@ -62,13 +61,73 @@
          text-align: center;
          cursor: pointer;
       }
+
       .popup-account__recov {
          display: none;
          width: 100%;
       }
+
       .popup-account__login {
          display: none;
          width: 100%;
+      }
+
+      .item-pay {
+         display: flex;
+         @include adaptiv-value("margin-bottom", 25, 18, 5);
+         @include adaptiv-value("margin-top", 23, 15, 5);
+
+         &:last-child {
+            margin-top: 0
+         }
+
+         // .item-pay__cnt
+
+
+         input[type=radio] {
+            @include adaptiv-value("width", 32, 18, 5);
+            @include adaptiv-value("height", 32, 18, 5);
+            @include adaptiv-value("margin-right", 16, 12, 5);
+         }
+
+         &__cnt {
+            img {
+               max-width: 100%;
+            }
+
+         }
+
+         // .item-pay__icon
+
+         &__icon {}
+
+         // .item-pay__title
+
+         &__title {
+            font-weight: 700;
+            @include adaptiv-value("font-size", 18, 13, 5);
+            line-height: 200%;
+            margin: 5px 0;
+         }
+
+         // .item-pay__sub
+
+         &__sub {
+            font-weight: 300;
+            @include adaptiv-value("font-size", 16, 10, 5);
+            line-height: 150%;
+         }
+
+         // .item-pay__contact
+
+         &__contact {}
+
+         // .item-pay__contact-txt
+
+         &__contact-txt {
+            margin: 0;
+            @include adaptiv-value("margin-bottom", 23, 10, 5);
+         }
       }
    }
 
@@ -80,7 +139,6 @@
       @include adaptiv-value("font-size", 24, 16, 5);
       line-height: 133%;
    }
-
 
    // .popup-account__item
 

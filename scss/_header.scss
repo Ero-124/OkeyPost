@@ -87,7 +87,8 @@
 			}
 
 			&.notifications {
-				padding: 0px px 0px 0px;
+				padding: 0px 0px 0px 0px;
+				position: relative;
 
 				&::after {
 					content: '2';

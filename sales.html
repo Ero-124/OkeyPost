@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-   <!-- Meta tags -->
+   <!-- Meta теги -->
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- CSS styles -->
+   <!-- CSS стили -->
    <link rel="stylesheet" href="css/fonts.css">
    <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    <link rel="stylesheet" href="css/style.css">
-   <!-- Title document -->
+   <!-- Заголовок имя документа -->
    <title>Распродажи</title>
 </head>
 
 <body>
-
+   <!-- Оболочка страницы -->
    <div class="wrapper">
+      <!-- Заголовок  документа  "Header" -->
       <header class="header">
          <div class="container">
             <div class="header__inner">
@@ -52,8 +53,9 @@
                </nav>
                <div class="header__right-menu right-menu">
                   <div class="right-menu__login">
-                     <a href="" class="icon-user">Вход</a>
+                     <span class="icon-user">Вход</span>
                   </div>
+
                   <div class="right-menu__connect">
                      <a href="" class="btn-green">Связаться с нами</a>
                   </div>
@@ -64,8 +66,97 @@
             </div>
          </div>
       </header>
-
+      <!-- Попапы для входа аккаунт, регистрации, забыли пароль -->
+      <div class="popup-account__bg">
+         <div class="popup-account__container">
+            <div class="popup-account__square">
+               <div class="popup-account__close">&times;</div>
+               <form action="#" class="popup-account__signin">
+                  <h2 class="popup-account__title">Выполните вход в ваш личный кабинет</h2>
+                  <div class="popup-account__item">
+                     <label for="login-phone">Номер телефона:</label>
+                     <input type="text" id="login-phone" required>
+                  </div>
+                  <div class="popup-account__item">
+                     <label for="login-email">Ваш email:</label>
+                     <input type="text" id="login-email" required>
+                  </div>
+                  <div class="popup-account__item">
+                     <label for="pass">Ваш пароль:</label>
+                     <div class="popup-account__pass">
+                        <input type="password" class="password" id="pass" required>
+                        <i class="fa-solid fa-eye-slash show-hide-pw"></i>
+                     </div>
+                  </div>
+                  <div class="popup-account__recovery">
+                     <button class="popup-account__link popup-account__recovery-link">Восстановление пароля</button>
+                     или <button class="popup-account__link popup-account__login-link">быстрая регистрация</б>
+                  </div>
+                  <div class="popup-account__item-soc">
+                     <div class="popup-account__btn">
+                        <a href="" class="popup-account__button btn-green">Войти</a>
+                     </div>
+                     <div class="popup-account__social">
+                        <a href="" class="icon-google"></a>
+                        <a href="" class="icon-facebook"></a>
+                        <a href="" class="icon-vk"></a>
+                     </div>
+                  </div>
+               </form>
+               <!-- Восстоновление пароля -->
+               <form action="#" class="popup-account__recov">
+                  <h2 class="popup-account__title">Восстановление пароля</h2>
+                  <h3 class="popup-account__sub">Введите Email, с которым вы зарегистрированы на сайте, и нажмите
+                     <b>«Восстановить»</b></h3>
+                  <div class="popup-account__item">
+                     <label for="recovery-email">Ваш email:</label>
+                     <input type="text" id="recovery-email" required>
+                  </div>
+                  <div class="popup-account__recovery">
+                     <div>Вспомнили пароль? <button class="popup-account__link popup-account__signin-link">Выполните
+                           вход</button>
+                     </div>
+                  </div>
+                  <div class="popup-account__btn">
+                     <button class="popup-account__button btn-green">Восстановить</button>
+                  </div>
+               </form>
+               <!-- Регистрация -->
+               <form action="#" class="popup-account__login">
+                  <h2 class="popup-account__title">Регистрация</h2>
+                  <div class="popup-account__item">
+                     <label for="register-firstName">Имя:</label>
+                     <input type="text" id="register-firstName" required>
+                  </div>
+                  <div class="popup-account__item">
+                     <label for="register-lastName">Фамилия:</label>
+                     <input type="text" id="register-lastName" required>
+                  </div>
+                  <div class="popup-account__item">
+                     <label for="register-email">Ваш email:</label>
+                     <input type="text" id="register-email" required>
+                  </div>
+                  <div class="popup-account__item">
+                     <label for="register-login">Ваш логин:</label>
+                     <input type="text" id="register-login" required>
+                  </div>
+                  <div class="popup-account__item">
+                     <label for="register-password">Ваш пароль:</label>
+                     <input type="text" id="register-password" required>
+                  </div>
+                  <div class="popup-account__recovery">
+                     <button class="popup-account__link popup-account__signin-lnk">Выполните вход</button>
+                  </div>
+                  <div class="popup-account__btn">
+                     <button class="popup-account__button btn-green">Регистрация</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- Контент документа "Main" -->
       <main>
+         <!-- Маленький блог для Часто задаваемые вопросы -->
          <section class="blog-small">
             <div class="blog-small__bg blog-bg">
                <div class="container">
@@ -80,7 +171,7 @@
                </div>
             </div>
          </section>
-
+         <!-- Блог для распродажи -->
          <section class="black-friday">
             <div class="container">
                <div class="black-friday__title title">Black Friday Early Access
@@ -324,7 +415,7 @@
                </div>
             </div>
          </section>
-
+          <!-- Блог Спросите нас в соцсетях !-->
          <section class="blog-social">
             <div class="blog-social__bg blog-bg">
                <div class="container">
@@ -345,9 +436,8 @@
                </div>
             </div>
          </section>
-
       </main>
-
+      <!-- Подвал докимента "Footer" -->
       <footer class="footer">
          <div class="container">
             <div class="footer__inner">
@@ -463,8 +553,11 @@
          </div>
       </footer>
    </div>
-
+   <!-- Скрипты JS -->
+   <script src="https://kit.fontawesome.com/364482cb4d.js" type="text/javascript"></script>
    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   <script src="js/tabs.js"></script>
+   <script src="js/popup.js"></script>
    <script src="js/main.js"></script>
 </body>
 
