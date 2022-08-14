@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <!-- Meta теги -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- CSS стили -->
+   <link rel="stylesheet" href="css/fonts.css">
+   <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+   <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Заголовок имя документа -->
+   <title>Адресная книга</title>
+</head>
+
+<body>
+   <!-- Оболочка страницы -->
+   <div class="wrapper">
+      <!-- Заголовок  документа  "Header" -->
+      <header class="header">
+         <div class="container-big">
+            <div class="header__inner">
+               <a href="index.html" class="header__logo">
+                  <img src="img/others/logoo.png" alt="OkeyPost logo">
+                  <span>OkeyPost</span>
+               </a>
+               <nav class="header__menu menu" id="sidebar">
+                  <ul class="menu__list">
+                     <li class="menu__item">
+                        <a href="index.html" class="menu__link">Главная</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="profile.html" class="menu__link">Профиль</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="order.html" class="menu__link">Заказы</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="parcels.html" class="menu__link">Посылки</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="transactions.html" class="menu__link">Транзакции</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="addresbook.html" class="menu__link">Адресная книга</a>
+                     </li>
+                     <li class="menu__item">
+                        <a href="notifications.html" class="menu__link notifications">Уведомления</a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="header__right-menu menu-profile">
+                  <div class="menu-profile__info">
+                     <img src="img/profile/20220413_002747.jpg" alt="Иконка пользователя">
+                     <span>Erik Khachatryan</span>
+                  </div>
+               </div>
+               <div class="header__burger" id="toggle">
+                  <span></span>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Контент документа "Main" -->
+      <main>
+         <!-- Блог Информации о профиле -->
+         <section class="main-profile">
+            <div class="container-big">
+               <div class="main-profile__inner">
+                  <div class="main-profile__item item-profile">
+                     <div class="item-profile__block">
+                        <div class="item-profile__clock item-profile__item icon-clock"><span>Лондон: 19 : 10 : 36</span>
+                        </div>
+                        <div class="item-profile__alarm item-profile__item icon-alarm"><span>Пн.-Пт. 09:00-18:00 <wbr>Сб.
+                              09:00-14:00<wbr></span></div>
+                     </div>
+                     <div class="item-profile__block">
+                        <a href="" class="item-profile__change item-profile__item icon-bank"><span>Курс валют</span></a>
+                        <div class="item-profile__bonus item-profile__item icon-dollar"><span>Бонусный счет: £ 0</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-profile__item item-profile">
+                     <div class="item-profile__block">
+                        <div class="item-profile__balance item-profile__item">Ваш баланс: £ 0</div>
+                        <a href="" class="item-profile__add item-profile__item btn-green">Добавить транзакцию</a>
+                     </div>
+                     <div class="item-profile__block">
+                        <a href="" class="item-profile__paypal item-profile__item"><img src="img/others/paypal.png"
+                              alt="Иконка PayPal"></a>
+                        <a href="" class="item-profile__visa item-profile__item"><img src="img/others/visa.png"
+                              alt="Иконка Visa MasterCard"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Блог Адресная книга -->
+         <section class="addres">
+            <div class="container-big">
+               <div class="addres__title">Адресная пользователя Erik Khachatryan</div>
+               <div class="addres__inner">
+                  <form action="#" class="addres__form">
+                     <div class="addres__items">
+                        <div class="addres__fields">
+                           <label for="addresLastName">Фамилия<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Имя<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Страна<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Область<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Район<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Город<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Улица<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Дом<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Квартира<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Индекс<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                        <div class="addres__fields">
+                           <label for="addresLastName">Телефон<span>*</span></label>
+                           <input type="text" required>
+                        </div>
+                     </div>
+                     <div class="addres__buttons">
+                        <button type="submit" class="addres__save btn-green">Сохранить</button>
+                        <a href="" class="addres__new">+ Добавить еще адрес</a>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+      </main>
+      <!-- Подвал докимента "Footer" -->
+      <footer class="footer cpy">
+         <div class="footer__copyright">
+            © 2021 Okeypost . Все права защищены.
+         </div>
+      </footer>
+   </div>
+   <!-- Скрипты JS -->
+   <script src="https://kit.fontawesome.com/364482cb4d.js" type="text/javascript"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

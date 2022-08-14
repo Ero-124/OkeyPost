@@ -1,0 +1,82 @@
+.addres {
+   @include adaptiv-value("padding-top", 76, 30, 5);
+   // .addres__title
+
+   &__title {
+      font-weight: 700;
+      @include adaptiv-value("font-size", 26, 13, 5);
+      @include adaptiv-value("margin-bottom", 27, 15, 5);
+      line-height: 138%;
+   }
+
+   // .addres__inner
+
+   &__inner {}
+
+   // .addres__form
+
+   &__form {}
+
+   // .addres__items
+
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   // .addres__fields
+
+   &__fields {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 33.333%;
+      @include adaptiv-value("margin-bottom", 30, 15, 5);
+
+      label {
+         font-weight: 700;
+         @include adaptiv-value("font-size", 18, 12, 5);
+         line-height: 200%;
+         @include adaptiv-value("margin-bottom", 10, 5, 5);
+
+         span {
+            color: #FF5290;
+         }
+      }
+
+      input {
+         width: 90%;
+         background: #FCFDFF;
+         border: 1px solid #C0C9D7;
+         border-radius: 6px;
+         @include adaptiv-value("height", 60, 40, 5);
+         padding: 0 10px;
+         @include adaptiv-value("font-size", 18, 12, 5);
+      }
+   }
+
+   // .addres__buttons
+
+   &__buttons {}
+
+   // .addres__save
+
+   &__save {
+      display: block;
+      @include adaptiv-value("margin-bottom", 45, 20, 5);
+   }
+
+   // .addres__new
+
+   &__new {
+      color: #00C97B;
+      font-weight: 700;
+      @include adaptiv-value("font-size", 18, 12, 5);
+      line-height: 115%;
+   }
+
+   @media (max-width: 767.98px) {
+      .addres__fields {
+         flex: 0 0 50%;
+      }
+   }
+}

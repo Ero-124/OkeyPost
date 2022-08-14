@@ -259,3 +259,11 @@ a.green {
 		margin: 0px 0px 20px 0px;
 	}
 }
+
+
+.popup-account__title {
+	display: inline-block;
+	font-weight: 700;
+	@include adaptiv-value("font-size", 24, 16, 5);
+	line-height: 133%;
+}

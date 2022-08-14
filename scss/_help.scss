@@ -81,8 +81,9 @@
       margin: 0px 0px 10px 0px;
       &.active {
          .help-question__content {
-            height: 70px;
+            max-height: 200px;
             margin: 15px 0px 0px 0px;
+            @include adaptiv-value("font-size", 16, 11, 5);
          }
          .help-question__arrow {
             transform: rotate(-180deg);
@@ -124,7 +125,7 @@
    // .help-question__content
 
    &__content {
-      height: 0;
+      max-height: 0;
       overflow-y: auto;
       @include adaptiv-value("font-size", 13, 11, 5);
       font-weight: 400;

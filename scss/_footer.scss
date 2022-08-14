@@ -1,5 +1,14 @@
 .footer {
 
+   &.cpy {
+      background: #F2F6FC;
+      .footer__copyright {
+         &::before {
+            display: none;
+         }
+      }
+   }
+
    // .footer__inner
 
    &__inner {
@@ -25,7 +34,7 @@
       height: 100%
    }
 
-   // footer__copyright
+   // .footer__copyright
 
    &__copyright {
       @include adaptiv-value("padding-top", 36, 25, 5);
@@ -69,6 +78,7 @@
             @include adaptiv-value("line-height", 42, 31, 5);
             text-align: center;
             transition: all 0.3s ease 0s;
+
             &:last-child {
                margin: 0px 0px 0px 0px;
             }
